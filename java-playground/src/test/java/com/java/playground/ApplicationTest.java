@@ -6,6 +6,6 @@ import org.junit.jupiter.api.Test;
 public final class ApplicationTest {
   @Test
   public void testApplication() {
-    Application application = new Application();
+    Application.main(new String[] {});
   }
 }
