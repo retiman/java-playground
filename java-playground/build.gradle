@@ -20,6 +20,7 @@ dependencies {
   testImplementation rootProject.ext.dependencies.'junit-jupiter-api'
   testImplementation rootProject.ext.dependencies.'junit-jupiter-engine'
   testImplementation rootProject.ext.dependencies.'junit-jupiter-params'
+  testImplementation rootProject.ext.dependencies.'mockito'
 }
 
 java {
