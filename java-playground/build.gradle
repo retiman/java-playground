@@ -22,11 +22,6 @@ dependencies {
   testImplementation rootProject.ext.dependencies.'junit-jupiter-params'
 }
 
-java {
-  sourceCompatibility = JavaVersion.VERSION_11
-  targetCompatibility = JavaVersion.VERSION_11
-}
-
 checkstyle {
   toolVersion = '8.29'
 }

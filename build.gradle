@@ -1,6 +1,5 @@
 plugins {
   id 'idea'
-  id 'jacoco'
 }
 
 allprojects {
@@ -8,6 +7,12 @@ allprojects {
     jcenter()
     mavenCentral()
   }
+
+  apply plugin: 'java'
+  apply plugin: 'checkstyle'
+
+  sourceCompatibility = JavaVersion.VERSION_11
+  targetCompatibility = JavaVersion.VERSION_11
 }
 
 subprojects { p ->
