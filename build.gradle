@@ -7,18 +7,6 @@ allprojects {
     jcenter()
     mavenCentral()
   }
-
-  apply plugin: 'java'
-  apply plugin: 'checkstyle'
-
-  sourceCompatibility = JavaVersion.VERSION_11
-  targetCompatibility = JavaVersion.VERSION_11
-
-  checkstyle {
-    toolVersion = '8.29'
-    ignoreFailures = false
-    showViolations = true
-  }
 }
 
 subprojects { p ->
