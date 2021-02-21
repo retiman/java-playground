@@ -11,13 +11,17 @@ public final class DiceGame {
     this.diceManager = diceManager;
   }
 
+  public DiceGame() {
+    this(new NullRecorder(), new RealDiceManager());
+  }
+
   public double averageScore() {
     double result = 0;
     int times = 3;
 
     for (int i = 0; i < times; i++) {
       int value = diceManager.throwDie();
-      eventRecorder.recordThrowEvent(value);
+      // eventRecorder.recordThrowEvent(value);
 
       result += value;
     }
