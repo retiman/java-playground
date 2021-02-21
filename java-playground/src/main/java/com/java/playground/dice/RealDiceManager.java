@@ -1,9 +1,11 @@
 package com.java.playground.dice;
 
-public final class RealDiceManager implements DiceManager {
+import java.util.Random;
 
+
+public final class RealDiceManager implements DiceManager {
   @Override
   public int throwDie() {
-    return 0;
+    return Math.abs(new Random().nextInt(5)) + 1;
   }
 }

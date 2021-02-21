@@ -45,7 +45,7 @@ ext {
       'log4j-api': 'org.apache.logging.log4j:log4j-api:2.13.1',
       'log4j-core': 'org.apache.logging.log4j:log4j-core:2.13.1',
       'log4j-slf4j-impl': 'org.apache.logging.log4j:log4j-slf4j-impl:2.13.1',
-      'mockito': 'org.mockito:mockito-core:1.4',
+      'mockito': 'org.mockito:mockito-core:3.7.7',
       'slf4j-api': 'org.slf4j:slf4j-api:1.7.30'
   ]
 }
