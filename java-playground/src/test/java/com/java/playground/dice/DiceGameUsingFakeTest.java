@@ -9,17 +9,20 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public final class DiceGameUsingFakeTest {
-  private EventRecorder recorder;
+  private RealEventRecorder recorder;
   private DiceGame game;
 
   @BeforeEach
   public void setUp() {
-    // recorder = new RealEventRecorder();
-    game = new DiceGame(new FakeDiceManager());
+    recorder = new RealEventRecorder();
+    game = new DiceGame(
+        recorder,
+        new FakeDiceManager());
   }
 
   @Test
   public void testAverageScore() {
     assertThat(game.averageScore()).isEqualTo(2.3333333333333335);
+    assertThat(recorder.getEvents()).containsExactly(1, 1, 5);
   }
 }

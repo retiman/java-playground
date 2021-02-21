@@ -1,9 +1,13 @@
 package com.java.playground.dice;
 
 public final class DiceGame {
+  private final EventRecorder eventRecorder;
   private final DiceManager diceManager;
 
-  public DiceGame(DiceManager diceManager) {
+  public DiceGame(
+      EventRecorder eventRecorder,
+      DiceManager diceManager) {
+    this.eventRecorder = eventRecorder;
     this.diceManager = diceManager;
   }
 
@@ -12,7 +16,10 @@ public final class DiceGame {
     int times = 3;
 
     for (int i = 0; i < times; i++) {
-      result += diceManager.throwDie();
+      int value = diceManager.throwDie();
+      eventRecorder.recordThrowEvent(value);
+
+      result += value;
     }
 
     return result / times;

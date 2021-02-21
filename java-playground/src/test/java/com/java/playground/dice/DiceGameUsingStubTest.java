@@ -12,7 +12,9 @@ public final class DiceGameUsingStubTest {
 
   @BeforeEach
   public void setUp() {
-    game = new DiceGame(new StubDiceManager());
+    game = new DiceGame(
+        new NullRecorder(),
+        new StubDiceManager());
   }
 
   @Test

@@ -19,7 +19,9 @@ public final class DiceGameUsingMockTest {
     mockDiceManager = mock(DiceManager.class);
     when(mockDiceManager.throwDie()).thenReturn(1, 2, 3);
 
-    game = new DiceGame(mockDiceManager);
+    game = new DiceGame(
+        new NullRecorder(),
+        mockDiceManager);
   }
 
   @Test
