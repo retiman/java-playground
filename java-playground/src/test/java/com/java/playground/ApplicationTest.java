@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 public final class ApplicationTest {
   @Test
   public void testRealApplication() {
+    // Guice does not allow overriding of bindings
     Injector injector = Guice.createInjector(
         new ApplicationModule(),
         new ApplicationLiveModule());
@@ -16,6 +17,7 @@ public final class ApplicationTest {
 
   @Test
   public void testFakeApplication() {
+    // Guice does not allow overriding of bindings
     Injector injector = Guice.createInjector(
         new ApplicationModule(),
         new ApplicationTestModule());

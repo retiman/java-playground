@@ -1,13 +1,23 @@
 package com.java.playground.dice;
 
+import javax.inject.Provider;
+
+
 final class RealDiceGame implements DiceGame {
-  private final LegacyDiceWidget legacyDiceWidget;
   private final DiceManager diceManager;
+  private final Provider<LegacyDiceWidget> legacyDiceWidgetProvider;
+  private LegacyDiceWidget legacyDiceWidget;
 
   RealDiceGame(
-      LegacyDiceWidget legacyDiceWidget,
-      DiceManager.Factory diceManagerFactory) {
-    this.legacyDiceWidget = legacyDiceWidget;
+      DiceManager.Factory diceManagerFactory,
+    Provider<LegacyDiceWidget> legacyDiceWidgetProvider) {
+    this.legacyDiceWidgetProvider = legacyDiceWidgetProvider;
     this.diceManager = diceManagerFactory.create(System.currentTimeMillis());
+  }
+
+  private void doSomething() {
+    if (legacyDiceWidget == null) {
+      legacyDiceWidget = legacyDiceWidgetProvider.get();
+    }
   }
 }

@@ -5,6 +5,12 @@ public final class LegacyDiceWidget {
   }
 
   public static LegacyDiceWidget create() {
+    try {
+      Thread.sleep(5000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+
     return new LegacyDiceWidget();
   }
 }
