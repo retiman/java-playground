@@ -11,6 +11,8 @@ dependencies {
   implementation rootProject.ext.dependencies.'apiguardian-api'
   implementation rootProject.ext.dependencies.'auto-value-annotations'
   implementation rootProject.ext.dependencies.'guava'
+  implementation rootProject.ext.dependencies.'guice'
+  implementation rootProject.ext.dependencies.'guice-assistedinject'
   implementation rootProject.ext.dependencies.'log4j-api'
   implementation rootProject.ext.dependencies.'log4j-core'
   implementation rootProject.ext.dependencies.'log4j-slf4j-impl'
