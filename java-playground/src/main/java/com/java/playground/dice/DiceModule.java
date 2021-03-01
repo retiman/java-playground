@@ -14,5 +14,6 @@ public final class DiceModule extends AbstractModule {
         .build(DiceManager.Factory.class));
 
     bind(DiceGame.class).to(RealDiceGame.class).in(Singleton.class);
+    bind(LegacyDiceWidget.class).toProvider(LegacyDiceWidgetProvider.class).in(Singleton.class);
   }
 }
