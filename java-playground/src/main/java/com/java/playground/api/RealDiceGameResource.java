@@ -6,7 +6,6 @@ import com.java.playground.data.Database;
 
 
 final class RealDiceGameResource implements DiceGameResource {
-  @Inject
   RealDiceGameResource(Database database) {
   }
 }

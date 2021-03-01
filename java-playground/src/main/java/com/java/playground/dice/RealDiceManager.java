@@ -6,7 +6,6 @@ import com.google.inject.assistedinject.Assisted;
 
 
 final class RealDiceManager implements DiceManager {
-  @Inject
-  public RealDiceManager(@Assisted Long seed) {
+  public RealDiceManager(Long seed) {
   }
 }
